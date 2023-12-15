@@ -5,6 +5,28 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * App\Models\Peninjauan
+ *
+ * @property int $id_peninjauan
+ * @property string $tanggal_peninjauan
+ * @property string $evaluasi
+ * @property int $nilai
+ * @property-read \App\Models\Kegiatan|null $kegiatan
+ * @property-read \App\Models\Pelatih|null $pelatih
+ * @property-read \App\Models\Pemain|null $pemain
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Statistik> $statistik
+ * @property-read int|null $statistik_count
+ * @method static \Database\Factories\PeninjauanFactory factory($count = null, $state = [])
+ * @method static \Illuminate\Database\Eloquent\Builder|Peninjauan newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Peninjauan newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Peninjauan query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Peninjauan whereEvaluasi($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Peninjauan whereIdPeninjauan($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Peninjauan whereNilai($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Peninjauan whereTanggalPeninjauan($value)
+ * @mixin \Eloquent
+ */
 class Peninjauan extends Model
 {
     use HasFactory;

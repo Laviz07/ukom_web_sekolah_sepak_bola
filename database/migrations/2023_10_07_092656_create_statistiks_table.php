@@ -12,9 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('statistika', function (Blueprint $table) {
-            $table->integer('id_statistika')->autoIncrement()->primary();
-            $table->varchar('detail_statistika', 50)->nullable(false);
-            
+            $table->integer('id_statistika')->autoIncrement();
+            $table->integer('id_peninjauan')->nullable(false);
+            $table->string('detail_statistika', 50)->nullable(false);
+
+            $table->foreign('id_peninjauan')->references('id_peninjauan')->on('peninjauan')
+                ->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

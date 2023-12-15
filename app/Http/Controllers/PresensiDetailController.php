@@ -34,7 +34,7 @@ class PresensiDetailController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Presensi $presensi)
+    public function show(PresensiDetail $presensi)
     {
         //
     }
@@ -42,7 +42,7 @@ class PresensiDetailController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Presensi $presensi)
+    public function edit(PresensiDetail $presensi)
     {
         //
     }
@@ -50,7 +50,7 @@ class PresensiDetailController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Presensi $presensi)
+    public function update(Request $request, PresensiDetail $presensi)
     {
         //
     }
@@ -58,7 +58,7 @@ class PresensiDetailController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Presensi $presensi)
+    public function destroy(PresensiDetail $presensi)
     {
         //
     }

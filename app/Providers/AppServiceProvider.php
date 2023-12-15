@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Models\Pemain;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -12,6 +14,9 @@ class AppServiceProvider extends ServiceProvider
     public function register(): void
     {
         //
+        if ($this->app->isLocal()) {
+            $this->app->register(\Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class);
+        }
     }
 
     /**
@@ -20,5 +25,14 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         //
+        // View::composer('*', function ($view) {
+        //     $nisn_pemain = request()->route('nisn_pemain');
+        //     $pemain = Pemain::find($nisn_pemain);
+
+        //     if ($pemain) {
+        //         // Pemain ditemukan, maka Anda dapat mengakses propertinya
+        //         $view->with('pemain', $pemain);
+        //     }
+        // });
     }
 }

@@ -1,0 +1,108 @@
+:root{
+    --color-baby-blue: #DFFFFD;
+    --color-picton-blue: #00A8E8;
+    --color-cerulean-blue:#007EA7;
+    --color-prussian-blue:#003459;
+    --color-rich-black: #00171F;
+    --color-white: #FFFDFD;
+    --color-pale-azure:#7FDEFF;
+    --color-space-cadet:#2C2A4A;
+}
+
+/* .table thead tr td{
+    background-color: var(--color-picton-blue);
+    color: white;
+} */
+
+.dropdown-item:hover {
+    color: white;
+    background-color: #dc3545;
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.image {
+    transition: transform 0.3s, filter 0.3s,  border-radius 0.3s;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.overlay span {
+    display: block;
+}
+
+.image-container:hover .image {
+    transform: scale(1.1);
+    filter: brightness(50%);
+    border-radius: 100%;
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+/* input[type=text], input[type=number], input[type=email] {
+    border: 1px solid var(--color-prussian-blue);
+    border-radius: 4px;
+} */
+
+.judul1{
+    color: var(--color-prussian-blue);
+    font-family: 'Outfit', sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.judul2{
+    color: var(--color-prussian-blue);
+    font-family: 'Outfit', sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.bg-c-blue {
+    background: linear-gradient(45deg,#4099ff,#73b4ff);
+}
+
+
+.card {
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 2.94px 0.06px rgba(4,26,55,0.16);
+    box-shadow: 0 1px 2.94px 0.06px rgba(4,26,55,0.16);
+    border: none;
+    margin-bottom: 30px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    width: auto;
+}
+
+.card .card-block {
+    padding: 75px;
+}
+
+.order-card i {
+    font-size: 26px;
+}
+
+.f-left {
+    float: left;
+}
+
+.f-right {
+    float: right;
+}
+
